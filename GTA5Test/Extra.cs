@@ -16,10 +16,10 @@ namespace GTA5Test
         /// <summary>
         /// Shows a notification on TheFeed, specifically "Cheat activated:\n". The substring is what comes next. So you can have, for example: "Cheat activated:\nSpawn Comet.".<br/>
         /// </summary>
-        /// <param name="subString">Plain text string.</param>
+        /// <param name="subString">Plain-text string.</param>
         public static void ShowCheatActivatedNotificationWithSubString(string subString)
         {
-            BEGIN_TEXT_COMMAND_THEFEED_POST("CHEAT_ACTIVATED" /*Cheat activated:~n~~a~*/);
+            BEGIN_TEXT_COMMAND_THEFEED_POST("CHEAT_ACTIVATED");
             ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(subString);
             END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
         }
@@ -43,7 +43,7 @@ namespace GTA5Test
             VDT_TRUCKDIGI = 18,
             VDT_ZTYPE = 20,
             VDT_SPORTBK = 22,
-            VDT_RACE = 23,
+            VDT_RACE = 23
         }
     }
 }
