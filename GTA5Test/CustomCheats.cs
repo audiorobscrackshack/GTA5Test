@@ -21,19 +21,18 @@ namespace GTA5Test
             {
                 if (global32209 == 0)
                     GlobalVariable.Get(32209).Write((int)CheatType.Vehicle);
-                //Extra._SHOW_CHEAT_ACTIVATED_NOTIFICATION_WITH_SUBSTRING_THEFEED("CHEAT_SPAWN_VEH10");
+                Extra.ShowCheatActivatedNotificationWithSubString("Spawn Deluxo");
                 Vector3 carSpawnPos = GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER_PED_ID(), 0f, 3.5f, 1f);
                 Vehicle vehicle = World.CreateVehicle(VehicleHash.Deluxo, carSpawnPos, pPed.Heading - 270f);
                 SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX(vehicle, 2); //yellow/blue
                 SET_VEHICLE_NUMBER_PLATE_TEXT(vehicle, "TIMEOUT"); // lore-friendly bttf plate
-                Notification.Show("Cheat activated:\nSpawn Deluxo.");
             }
 
             if (Game.WasCheatStringJustEntered("suicide"))
             {
                 if (global32209 == 0)
                     GlobalVariable.Get(32209).Write((int)CheatType.Painkiller); // This is dumb. But meh, it works.
-                Notification.Show("Cheat activated:\nCommit suicide.");
+                Extra.ShowCheatActivatedNotificationWithSubString("Commit suicide.");
                 Wait(1250);
                 pPed.Kill();
             }
