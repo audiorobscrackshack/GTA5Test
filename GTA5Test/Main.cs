@@ -46,28 +46,8 @@ namespace GTA5Test // Yeah, not the most creative name in the world.
         {
             Ped pPed = Game.Player.Character;
             Vehicle pVeh = pPed.CurrentVehicle;
-            var global32209 = GlobalVariable.Get(32209).Read<int>();
-            
-            if (Game.WasCheatStringJustEntered("deluxo"))
-            {
-                if (global32209 == 0)
-                    GlobalVariable.Get(32209).Write((int)Extra.CheatType.Vehicle);
-                //Extra._SHOW_CHEAT_ACTIVATED_NOTIFICATION_WITH_SUBSTRING_THEFEED("CHEAT_SPAWN_VEH10");
-                Vector3 carSpawnPos = GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER_PED_ID(), 0f, 3.5f, 1f);
-                Vehicle vehicle = World.CreateVehicle(VehicleHash.Deluxo, carSpawnPos, pPed.Heading - 90f);
-                SET_VEHICLE_NUMBER_PLATE_TEXT_INDEX(vehicle, 2); //yellow/blue
-                SET_VEHICLE_NUMBER_PLATE_TEXT(vehicle, "TIMEOUT"); // lore-friendly bttf plate
-                Notification.Show("Cheat activated:\nSpawn Deluxo.");
-            }
-            
-            if (Game.WasCheatStringJustEntered("suicide"))
-            {
-                if (global32209 == 0)
-                    GlobalVariable.Get(32209).Write((int)Extra.CheatType.Painkiller); // I know, the game probably wouldn't use 1, but it works. 
-                Notification.Show("Cheat activated:\nCommit suicide.");
-                Wait(1250);
-                pPed.Kill();
-            }
+
+            CustomCheats.Tick();
 
             if (_displayStr)
             {

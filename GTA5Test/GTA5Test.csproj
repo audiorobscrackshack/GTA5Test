@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomCheats.cs" />
     <Compile Include="Extra.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="NativeInvoker.cs" />

@@ -13,17 +13,6 @@ namespace GTA5Test
 {
     internal static class Extra
     {
-        public static void SCRIPT_INIT(string scriptName, int stackSize) //Position - 0x269D2
-        {
-            if (!DOES_SCRIPT_EXIST(scriptName)) return;
-
-            REQUEST_SCRIPT(scriptName);
-            if (HAS_SCRIPT_LOADED(scriptName))
-            {
-                START_NEW_SCRIPT(scriptName, stackSize);
-                SET_SCRIPT_AS_NO_LONGER_NEEDED(scriptName);
-            }
-        }
         public static void _SHOW_CHEAT_ACTIVATED_NOTIFICATION_WITH_SUBSTRING_THEFEED(string subString)
         // Shows a notification on TheFeed, specifically "Cheat activated:\n". The substring is what comes next. So you can have, for example: "Cheat activated:\n Spawn Comet.". \n was added by me, the game uses a new line for this instead.
         {
@@ -61,17 +50,6 @@ namespace GTA5Test
             VDT_RACE = 23,
             //VDT_LAZER_VINTAGE = 24, //in a separate file.
             //VDT_PBUS2 = 25 //unused.
-        }
-
-        public enum CheatType
-        // It adds them together! Not overwrite the value. Used as some sort of cheats ran in this session.
-        // It's almost like binary numbers that get flipped.
-        // For example, if you've used the vehicle cheats twice, it will only have that value ONCE. Not twice.
-        // It most likely is binary numbers that get flipped, I'll check the MemoryAddress's values tomorrow.
-        {
-            Painkiller = 32768,
-            Vehicle = 1048576,
-            Skyfall = 131072,
         }
     }
 }
