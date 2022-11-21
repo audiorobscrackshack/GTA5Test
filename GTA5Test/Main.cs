@@ -269,9 +269,7 @@ namespace GTA5Test // Yeah, not the most creative name in the world.
                             _ => 0
                         };
 
-                        SET_RADAR_AS_INTERIOR_THIS_FRAME(GET_HASH_KEY("V_FakePowerStationCS503"), 2795f, 1600f,
-                            0,
-                            zoom);
+                        SET_RADAR_AS_INTERIOR_THIS_FRAME(GET_HASH_KEY("V_FakePowerStationCS503"), 2795f, 1600f, 0, zoom);
                         SET_INSIDE_VERY_LARGE_INTERIOR(true);
                     }
                 }

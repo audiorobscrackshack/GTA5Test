@@ -7,7 +7,7 @@ This directory contains the GTA5Test project files.
 
 ## Files
 * [**CustomCheats.cs**](./CustomCheats.cs): Contains a WIP implementation of the GTA 5 cheat system.
-* [**Extra.cs**](./Extra.cs:) I'm not sure, to be honest. Currently contains a notification substring function, and the DashboardType enum.
+* [**Extra.cs**](./Extra.cs): I'm not sure, to be honest. Currently contains a notification substring function, and the DashboardType enum.
 * [**Main.cs**](./Main.cs): Main script source. A complete mess at the moment.
 * [**prologue1.cs**](./prologue1.cs): Reimplemented features from the `prologue1.ysc` script. Currently  only contains a (broken) version of the "Ludendorff, North Yankton, nine years ago." text. 
 * [**NativeInvoker.cs**](./NativeInvoker.cs): See [SHVDN-NativeGen](https://github.com/Sardelka9515/SHVDN-NativeGen).
